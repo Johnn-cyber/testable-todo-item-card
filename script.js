@@ -8,6 +8,8 @@ function tick() {
         tstatus.textContent = 'Completed';
         tstatus.style.color = 'green';
         tstatus.style.backgroundColor = 'greenyellow';
+        tstatus.style.padding = '2px 5px';
+        tstatus.style.borderRadius = '10px'; 
     }else{
         title.style.textDecoration = 'none';
         tstatus.textContent = 'Pending';
