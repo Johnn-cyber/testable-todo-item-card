@@ -14,7 +14,7 @@ function tick() {
         tstatus.style.color = 'orange';
         tstatus.style.backgroundColor = 'lightyellow';
         tstatus.style.padding = '2px 5px';
-        tstatus.style.borderRadius = '5px'; 
+        tstatus.style.borderRadius = '10px'; 
     }
 }
 const now = new Date();
