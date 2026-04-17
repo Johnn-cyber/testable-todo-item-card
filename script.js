@@ -8,9 +8,11 @@ function tick() {
     if (checkbox.checked) {
         title.style.textDecoration = 'line-through';
         statusSelect.value = 'Done';
+        body.style.borderColor = '#13f347';
     }else{
         title.style.textDecoration = 'none';
         statusSelect.value = 'To Do';
+        body.style.borderColor = '#f31313';
         tstatus.style.padding = '2px 5px';
         tstatus.style.borderRadius = '5px'; 
     }
