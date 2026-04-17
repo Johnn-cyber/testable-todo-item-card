@@ -15,17 +15,17 @@
               <h2 data-testid="test-todo-title" id="task-title">Design new onboarding flow</h2>
              </div>
              <div class="indication">
-               <span data-testid="test-todo-priority">High</span>
+               <span data-testid="test-todo-priority" id="task-priority">High</span>
              </div>
         </div>
-        <p data-testid="test-todo-description">
+        <p data-testid="test-todo-description" id="task-description">
             Redesign the user onboarding screen to improve first-week activation rate. Coordinate
              with the design team to create new mockups and implement the changes in the next sprint.  
         </p>
         <div class="footer">
-            <span class="due-date" data-testid="test-todo-due-date"><i class="fa-regular fa-calendar"></i> April 16, 2026</span>
+            <span id="due-date" data-testid="test-todo-due-date"><i class="fa-regular fa-calendar"></i> April 16, 2026</span>
             <span class="time-remaining" data-testid="test-todo-time-remaining" id="time-remaining"></span>
-            <span id="status" data-testid="test-todo-status">Pending</span>
+            <span id="status" data-testid="test-todo-status">Pendng</span>
         </div>
         <ul role="list">
             <li data-testid="test-todo-tag-work">Work</li>
@@ -36,6 +36,34 @@
             <button data-testid="test-todo-edit-button" onclick="edit()">Edit</button>
             <button data-testid="test-todo-delete-button" onclick="deleteb()">Delete</button>
     </article>
+    <section id="popup">
+       <h3>Editing mode</h3>
+       <form>
+        <label for="title">Title:</label>
+        <input type="text" id="change-title" name="title" data-testid="test-todo-edit-title-input">
+        <label for="description">Description:</label>
+        <textarea id="description" rows="3" name="description" data-testid="test-todo-edit-description-text"></textarea>
+        <div class="flexed-text">
+            <div class="column">
+                 <label for="priority">Priority:</label>
+                 <select id="priority" data-testid="test-todo-edit-priority-select">
+                   <option value="Low">Low</option>
+                   <option value="Medium">Medium</option>
+                   <option value="High">High</option>
+                 </select>
+             </div>
+             <div class="column">
+              <label for="due-date">Due date:</label>
+              <input type="date" id="date" name="due-date" data-testid="test-todo-edit-due-date-input">
+            </div>
+        </div>
+        <p id="warning"></p>
+    </form>
+    <div class="buttons">
+             <button data-testid="test-todo-save-button" onclick="check()">Save</button>
+             <button data-testid="test-todo-cancel-button" onclick="cancelb()">Cancel</button>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
