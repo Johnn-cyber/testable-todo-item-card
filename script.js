@@ -2,6 +2,7 @@ const checkbox = document.getElementById('checkbox');
 const title = document.getElementById('task-title');
 let tstatus = document.getElementById('status');
 const statusSelect = document.getElementById('status-select');
+let body = document.getElementById('skin');
 document.addEventListener('DOMContentLoaded', updateDueDate);
 function tick() {
     if (checkbox.checked) {
@@ -91,9 +92,12 @@ function check(){
     if(statusSelect.value === 'Done'){
         checkbox.checked = true;
         title.style.textDecoration = 'line-through';
+        body.style.borderColor = '#13f347';
     }
-      else{
+    else{
         checkbox.checked = false;
         title.style.textDecoration = 'none';
+        body.style.borderColor = '#f31313';
     }
  }
+
