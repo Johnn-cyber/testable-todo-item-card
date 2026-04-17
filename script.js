@@ -92,4 +92,8 @@ function check(){
         checkbox.checked = true;
         title.style.textDecoration = 'line-through';
     }
+      else{
+        checkbox.checked = false;
+        title.style.textDecoration = 'none';
+    }
  }
