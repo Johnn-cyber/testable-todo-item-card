@@ -11,7 +11,7 @@ body{
     font-size: 16px;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
-article{
+article,section{
     width: 30%;
     background: rgba(40, 40, 40, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.08);    
@@ -77,7 +77,7 @@ li{
     font-size: 11px;
     font-weight: 500;
 }
-button{
+button,input,textarea,select{
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 5px 10px;
@@ -87,7 +87,42 @@ button{
     font-weight: 500;
     color: rgba(255, 255, 255, 0.7);
 }
-@media screen and (max-width:425px) {
+option{
+    background-color: rgba(40, 40, 40, 0.6);
+}
+#popup{
+    display: none;
+    position: absolute;
+}
+#warning{
+    display: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.flexed-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    padding-top: 1rem;
+}
+label{
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 0.5rem;
+}
+@media screen and (max-width:425l-opx) {
     article{
         width: 80%;
     }
